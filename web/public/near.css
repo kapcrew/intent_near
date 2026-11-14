@@ -1,0 +1,28 @@
+/* INTENT's original blue/light/dark visual system stays intact. These are NEAR-only additions. */
+:root{--near-blue:#334cdb}
+.topbar .network-pill{white-space:nowrap}.topbar .network-pill i{background:#17b58c}
+.near-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.near-meta{color:var(--muted,#7b879c);font-size:.9rem;line-height:1.6}
+.near-status{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:.78rem;border:1px solid #dde3f1;padding:7px 12px;border-radius:99px}
+.near-status.ok{color:#087e66;background:#effaf4}.near-status.pending{color:#aa7420;background:#fff7e8}
+.near-note{font-size:.85rem;color:var(--muted,#7b879c);padding:12px 16px;border-left:3px solid var(--near-blue);margin:14px 0}
+.near-form{display:grid;gap:13px}.near-form label{font-size:.86rem;font-weight:700;display:grid;gap:5px}.near-form input,.near-form select,.near-form textarea{width:100%;min-width:0;padding:12px 14px;border:1px solid #bac6dd;border-radius:8px;background:var(--input-bg,#fff);color:var(--text,#1b2440)}
+.near-form textarea{min-height:84px;resize:vertical}.near-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}.near-stack{display:grid;gap:16px}
+.near-list{display:grid;gap:12px}.near-record{border-bottom:1px solid #ccd4e2;padding:12px 0;word-break:break-word}.near-record small{display:block;color:#7b879c;margin:5px 0}
+.near-tx{font-family:ui-monospace,Menlo,monospace;font-size:.82rem;overflow-wrap:anywhere}
+.near-banner{padding:12px 16px;border-radius:8px;border:1px solid #aebeea;background:rgba(51,76,219,.045);margin-bottom:20px}
+.near-kpi{display:grid;gap:5px}.near-kpi b{font-size:1.35rem}.near-kpi small{color:#718198}
+.near-ops{display:flex;gap:10px;flex-wrap:wrap}.near-ops button{cursor:pointer}
+.near-detail-image{width:100%;max-height:340px;object-fit:cover;border-radius:11px}
+.near-card-image{width:100%;height:195px;object-fit:cover}.near-property-row{display:flex;gap:14px;align-items:center;border-bottom:1px solid #ccd4e2;padding:14px 0}.near-property-row img{width:80px;height:62px;object-fit:cover;border-radius:6px}
+.near-unavailable{opacity:.76}.near-cta{display:flex;gap:10px;flex-wrap:wrap}.near-cta button{border-radius:10px}
+.near-architecture-flow{text-align:center;font-size:1.03rem;font-weight:700;padding:18px}
+.near-hero-tag{font-weight:700;letter-spacing:.13em;font-size:.74rem;text-transform:uppercase;color:#5369c8}
+.near-console{max-height:260px;overflow:auto;border:1px solid #202e53;background:#101d35;color:#dce8fc;border-radius:8px;padding:14px;font-family:ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.76rem}
+.near-copy{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.near-mini{font-size:.78rem;font-family:ui-monospace,monospace}
+.near-divider{height:1px;background:#d3dbeb;margin:16px 0}
+button:disabled{opacity:.5;cursor:not-allowed}
+[data-theme=dark] .near-form input,[data-theme=dark] .near-form select,[data-theme=dark] .near-form textarea{background:#1d2742;color:#f3f6ff;border-color:#465476}
+[data-theme=dark] .near-banner{background:rgba(82,109,226,.12)}[data-theme=dark] .near-record,[data-theme=dark] .near-property-row{border-color:#4c5870}
+@media(max-width:920px){.topbar{flex-wrap:wrap}.topbar .nav{order:3;overflow-x:auto;width:100%;justify-content:flex-start}.top-actions{margin-left:auto}.hero{grid-template-columns:1fr!important}}

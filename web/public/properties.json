@@ -1,0 +1,2652 @@
+[
+  {
+    "id": 1,
+    "slug": "shibuya-kaze-residences",
+    "name": "Shibuya Kaze Residences",
+    "city": "Tokyo",
+    "country": "Japan",
+    "lat": 35.7199,
+    "lng": 139.65852,
+    "type": "Serviced Living",
+    "value": 19000000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 190000,
+    "soldCells": 93100,
+    "targetYield": 5.5,
+    "occupancy": 89.8,
+    "passport": 97,
+    "freshness": 95,
+    "area": 2111,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Tokyo showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 2,
+    "slug": "marunouchi-gate-offices",
+    "name": "Marunouchi Gate Offices",
+    "city": "Tokyo",
+    "country": "Japan",
+    "lat": 35.61479,
+    "lng": 139.69824,
+    "type": "Office",
+    "value": 27700000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 277000,
+    "soldCells": 166200,
+    "targetYield": 3.8,
+    "occupancy": 91.1,
+    "passport": 94,
+    "freshness": 90,
+    "area": 2422,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Tokyo showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 3,
+    "slug": "azabu-garden-collection",
+    "name": "Azabu Garden Collection",
+    "city": "Tokyo",
+    "country": "Japan",
+    "lat": 35.7728,
+    "lng": 139.75562,
+    "type": "Logistics",
+    "value": 36400000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 364000,
+    "soldCells": 258440,
+    "targetYield": 5.5,
+    "occupancy": 92.4,
+    "passport": 99,
+    "freshness": 97,
+    "area": 2733,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "logistics opportunity in Tokyo showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 4,
+    "slug": "shinjuku-prime-tower",
+    "name": "Shinjuku Prime Tower",
+    "city": "Tokyo",
+    "country": "Japan",
+    "lat": 35.66606,
+    "lng": 139.55875,
+    "type": "Office",
+    "value": 45100000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 451000,
+    "soldCells": 369820,
+    "targetYield": 3.8,
+    "occupancy": 93.7,
+    "passport": 96,
+    "freshness": 92,
+    "area": 3044,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Tokyo showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 5,
+    "slug": "ginza-urban-living",
+    "name": "Ginza Urban Living",
+    "city": "Tokyo",
+    "country": "Japan",
+    "lat": 35.66532,
+    "lng": 139.72965,
+    "type": "Residential",
+    "value": 53800000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 538000,
+    "soldCells": 209820,
+    "targetYield": 5.5,
+    "occupancy": 95.0,
+    "passport": 93,
+    "freshness": 99,
+    "area": 3355,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in Tokyo showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 6,
+    "slug": "nakanoshima-river-offices",
+    "name": "Nakanoshima River Offices",
+    "city": "Osaka",
+    "country": "Japan",
+    "lat": 34.73717,
+    "lng": 135.49065,
+    "type": "Office",
+    "value": 16000000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 160000,
+    "soldCells": 80000,
+    "targetYield": 3.8,
+    "occupancy": 96.3,
+    "passport": 98,
+    "freshness": 94,
+    "area": 3666,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Osaka showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 7,
+    "slug": "umeda-living-quarter",
+    "name": "Umeda Living Quarter",
+    "city": "Osaka",
+    "country": "Japan",
+    "lat": 34.62717,
+    "lng": 135.46767,
+    "type": "Residential",
+    "value": 24700000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 247000,
+    "soldCells": 150670,
+    "targetYield": 5.5,
+    "occupancy": 97.6,
+    "passport": 95,
+    "freshness": 89,
+    "area": 3977,
+    "review": "REVIEWED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in Osaka showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Review"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 8,
+    "slug": "marina-bay-living",
+    "name": "Marina Bay Living",
+    "city": "Singapore",
+    "country": "Singapore",
+    "lat": 1.36749,
+    "lng": 103.86209,
+    "type": "Serviced Living",
+    "value": 30000000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 300000,
+    "soldCells": 216000,
+    "targetYield": 3.8,
+    "occupancy": 98.9,
+    "passport": 92,
+    "freshness": 96,
+    "area": 4288,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Singapore showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": true,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 9,
+    "slug": "tanjong-pagar-prime",
+    "name": "Tanjong Pagar Prime",
+    "city": "Singapore",
+    "country": "Singapore",
+    "lat": 1.3808,
+    "lng": 103.75051,
+    "type": "Mixed Use",
+    "value": 38700000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 387000,
+    "soldCells": 321210,
+    "targetYield": 5.5,
+    "occupancy": 89.7,
+    "passport": 97,
+    "freshness": 91,
+    "area": 4599,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "mixed use opportunity in Singapore showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 10,
+    "slug": "orchard-residences",
+    "name": "Orchard Residences",
+    "city": "Singapore",
+    "country": "Singapore",
+    "lat": 1.25694,
+    "lng": 103.86417,
+    "type": "Residential",
+    "value": 47400000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 474000,
+    "soldCells": 189600,
+    "targetYield": 3.8,
+    "occupancy": 91.0,
+    "passport": 94,
+    "freshness": 98,
+    "area": 4910,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in Singapore showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 11,
+    "slug": "raffles-place-offices",
+    "name": "Raffles Place Offices",
+    "city": "Singapore",
+    "country": "Singapore",
+    "lat": 1.48085,
+    "lng": 103.8604,
+    "type": "Office",
+    "value": 18100000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 181000,
+    "soldCells": 92310,
+    "targetYield": 5.5,
+    "occupancy": 92.3,
+    "passport": 99,
+    "freshness": 93,
+    "area": 5221,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Singapore showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 12,
+    "slug": "dubai-marina-horizon",
+    "name": "Dubai Marina Horizon",
+    "city": "Dubai",
+    "country": "UAE",
+    "lat": 25.1823,
+    "lng": 55.23183,
+    "type": "Logistics",
+    "value": 20000000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 200000,
+    "soldCells": 124000,
+    "targetYield": 3.8,
+    "occupancy": 93.6,
+    "passport": 96,
+    "freshness": 88,
+    "area": 5532,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "logistics opportunity in Dubai showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 13,
+    "slug": "downtown-dubai-collection",
+    "name": "Downtown Dubai Collection",
+    "city": "Dubai",
+    "country": "UAE",
+    "lat": 25.18857,
+    "lng": 55.34402,
+    "type": "Mixed Use",
+    "value": 28700000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 287000,
+    "soldCells": 209510,
+    "targetYield": 5.5,
+    "occupancy": 94.9,
+    "passport": 93,
+    "freshness": 95,
+    "area": 5843,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "mixed use opportunity in Dubai showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 14,
+    "slug": "business-bay-offices",
+    "name": "Business Bay Offices",
+    "city": "Dubai",
+    "country": "UAE",
+    "lat": 25.29081,
+    "lng": 55.21057,
+    "type": "Office",
+    "value": 37400000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 374000,
+    "soldCells": 314160,
+    "targetYield": 3.8,
+    "occupancy": 96.2,
+    "passport": 98,
+    "freshness": 90,
+    "area": 6154,
+    "review": "REVIEWED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Dubai showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Review"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 15,
+    "slug": "palm-jumeirah-residences",
+    "name": "Palm Jumeirah Residences",
+    "city": "Dubai",
+    "country": "UAE",
+    "lat": 25.07095,
+    "lng": 55.25318,
+    "type": "Serviced Living",
+    "value": 46100000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 461000,
+    "soldCells": 189010,
+    "targetYield": 5.5,
+    "occupancy": 97.5,
+    "passport": 95,
+    "freshness": 97,
+    "area": 6465,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Dubai showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 16,
+    "slug": "difc-executive-floors",
+    "name": "DIFC Executive Floors",
+    "city": "Dubai",
+    "country": "UAE",
+    "lat": 25.23373,
+    "lng": 55.30527,
+    "type": "Office",
+    "value": 54800000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 548000,
+    "soldCells": 284960,
+    "targetYield": 3.8,
+    "occupancy": 98.8,
+    "passport": 92,
+    "freshness": 92,
+    "area": 6776,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Dubai showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 17,
+    "slug": "al-maryah-business-centre",
+    "name": "Al Maryah Business Centre",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "lat": 24.45586,
+    "lng": 54.33234,
+    "type": "Office",
+    "value": 17000000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 170000,
+    "soldCells": 107100,
+    "targetYield": 5.5,
+    "occupancy": 89.6,
+    "passport": 97,
+    "freshness": 99,
+    "area": 7087,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Abu Dhabi showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 18,
+    "slug": "saadiyat-living-collection",
+    "name": "Saadiyat Living Collection",
+    "city": "Abu Dhabi",
+    "country": "UAE",
+    "lat": 24.40087,
+    "lng": 54.43033,
+    "type": "Mixed Use",
+    "value": 25700000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 257000,
+    "soldCells": 190180,
+    "targetYield": 3.8,
+    "occupancy": 90.9,
+    "passport": 94,
+    "freshness": 94,
+    "area": 7398,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "mixed use opportunity in Abu Dhabi showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 19,
+    "slug": "central-harbour-offices",
+    "name": "Central Harbour Offices",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "lat": 22.36426,
+    "lng": 114.16744,
+    "type": "Office",
+    "value": 31000000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 310000,
+    "soldCells": 263500,
+    "targetYield": 5.5,
+    "occupancy": 92.2,
+    "passport": 99,
+    "freshness": 89,
+    "area": 7709,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Hong Kong showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 20,
+    "slug": "taikoo-place-collection",
+    "name": "Taikoo Place Collection",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "lat": 22.26185,
+    "lng": 114.12119,
+    "type": "Mixed Use",
+    "value": 39700000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 397000,
+    "soldCells": 166740,
+    "targetYield": 3.8,
+    "occupancy": 93.5,
+    "passport": 96,
+    "freshness": 96,
+    "area": 8020,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "mixed use opportunity in Hong Kong showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 21,
+    "slug": "mid-levels-residences",
+    "name": "Mid-Levels Residences",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "lat": 22.33301,
+    "lng": 114.2735,
+    "type": "Residential",
+    "value": 48400000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 484000,
+    "soldCells": 256520,
+    "targetYield": 5.5,
+    "occupancy": 94.8,
+    "passport": 93,
+    "freshness": 91,
+    "area": 8331,
+    "review": "REVIEWED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in Hong Kong showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Review"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 22,
+    "slug": "kowloon-commerce-house",
+    "name": "Kowloon Commerce House",
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "lat": 22.39673,
+    "lng": 114.05881,
+    "type": "Office",
+    "value": 19100000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 191000,
+    "soldCells": 122240,
+    "targetYield": 3.8,
+    "occupancy": 96.1,
+    "passport": 98,
+    "freshness": 98,
+    "area": 8642,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Hong Kong showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 23,
+    "slug": "gangnam-prime-offices",
+    "name": "Gangnam Prime Offices",
+    "city": "Seoul",
+    "country": "South Korea",
+    "lat": 37.52257,
+    "lng": 126.98774,
+    "type": "Office",
+    "value": 21000000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 210000,
+    "soldCells": 157500,
+    "targetYield": 5.5,
+    "occupancy": 97.4,
+    "passport": 95,
+    "freshness": 93,
+    "area": 8953,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Seoul showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 24,
+    "slug": "yeouido-finance-tower",
+    "name": "Yeouido Finance Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "lat": 37.63145,
+    "lng": 127.0155,
+    "type": "Office",
+    "value": 29700000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 297000,
+    "soldCells": 255420,
+    "targetYield": 3.8,
+    "occupancy": 98.7,
+    "passport": 92,
+    "freshness": 88,
+    "area": 9264,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Seoul showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 25,
+    "slug": "hannam-living",
+    "name": "Hannam Living",
+    "city": "Seoul",
+    "country": "South Korea",
+    "lat": 37.53493,
+    "lng": 126.87786,
+    "type": "Residential",
+    "value": 38400000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 384000,
+    "soldCells": 165120,
+    "targetYield": 5.5,
+    "occupancy": 89.5,
+    "passport": 97,
+    "freshness": 95,
+    "area": 1975,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in Seoul showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 26,
+    "slug": "seongsu-mixed-use",
+    "name": "Seongsu Mixed Use",
+    "city": "Seoul",
+    "country": "South Korea",
+    "lat": 37.50945,
+    "lng": 127.10035,
+    "type": "Mixed Use",
+    "value": 47100000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 471000,
+    "soldCells": 254340,
+    "targetYield": 3.8,
+    "occupancy": 90.8,
+    "passport": 94,
+    "freshness": 90,
+    "area": 2286,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "mixed use opportunity in Seoul showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 27,
+    "slug": "haeundae-coastal-residences",
+    "name": "Haeundae Coastal Residences",
+    "city": "Busan",
+    "country": "South Korea",
+    "lat": 35.22117,
+    "lng": 129.05838,
+    "type": "Serviced Living",
+    "value": 49000000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 490000,
+    "soldCells": 318500,
+    "targetYield": 5.5,
+    "occupancy": 92.1,
+    "passport": 99,
+    "freshness": 97,
+    "area": 2597,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Busan showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 28,
+    "slug": "barangaroo-offices",
+    "name": "Barangaroo Offices",
+    "city": "Sydney",
+    "country": "Australia",
+    "lat": -33.91109,
+    "lng": 151.19391,
+    "type": "Office",
+    "value": 18000000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 180000,
+    "soldCells": 136800,
+    "targetYield": 3.8,
+    "occupancy": 93.4,
+    "passport": 96,
+    "freshness": 92,
+    "area": 2908,
+    "review": "REVIEWED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Sydney showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Review"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 29,
+    "slug": "circular-quay-living",
+    "name": "Circular Quay Living",
+    "city": "Sydney",
+    "country": "Australia",
+    "lat": -33.83417,
+    "lng": 151.27583,
+    "type": "Residential",
+    "value": 26700000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 267000,
+    "soldCells": 232290,
+    "targetYield": 5.5,
+    "occupancy": 94.7,
+    "passport": 93,
+    "freshness": 99,
+    "area": 3219,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in Sydney showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 30,
+    "slug": "collins-street-offices",
+    "name": "Collins Street Offices",
+    "city": "Melbourne",
+    "country": "Australia",
+    "lat": -37.80195,
+    "lng": 144.91963,
+    "type": "Office",
+    "value": 32000000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 320000,
+    "soldCells": 140800,
+    "targetYield": 3.8,
+    "occupancy": 96.0,
+    "passport": 98,
+    "freshness": 94,
+    "area": 3530,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Melbourne showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 31,
+    "slug": "southbank-residences",
+    "name": "Southbank Residences",
+    "city": "Melbourne",
+    "country": "Australia",
+    "lat": -37.87685,
+    "lng": 145.0034,
+    "type": "Residential",
+    "value": 40700000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 407000,
+    "soldCells": 223850,
+    "targetYield": 5.5,
+    "occupancy": 97.3,
+    "passport": 95,
+    "freshness": 89,
+    "area": 3841,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in Melbourne showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 32,
+    "slug": "canary-wharf-offices",
+    "name": "Canary Wharf Offices",
+    "city": "London",
+    "country": "United Kingdom",
+    "lat": 51.55152,
+    "lng": -0.11979,
+    "type": "Office",
+    "value": 46000000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 460000,
+    "soldCells": 303600,
+    "targetYield": 3.8,
+    "occupancy": 98.6,
+    "passport": 92,
+    "freshness": 96,
+    "area": 4152,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in London showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 33,
+    "slug": "mayfair-living",
+    "name": "Mayfair Living",
+    "city": "London",
+    "country": "United Kingdom",
+    "lat": 51.46154,
+    "lng": -0.1871,
+    "type": "Residential",
+    "value": 16700000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 167000,
+    "soldCells": 128590,
+    "targetYield": 5.5,
+    "occupancy": 89.4,
+    "passport": 97,
+    "freshness": 91,
+    "area": 4463,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in London showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 34,
+    "slug": "kings-cross-mixed-use",
+    "name": "King\u2019s Cross Mixed Use",
+    "city": "London",
+    "country": "United Kingdom",
+    "lat": 51.49805,
+    "lng": -0.023,
+    "type": "Mixed Use",
+    "value": 25400000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 254000,
+    "soldCells": 223520,
+    "targetYield": 3.8,
+    "occupancy": 90.7,
+    "passport": 94,
+    "freshness": 98,
+    "area": 4774,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "mixed use opportunity in London showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 35,
+    "slug": "la-d-fense-offices",
+    "name": "La D\u00e9fense Offices",
+    "city": "Paris",
+    "country": "France",
+    "lat": 48.88978,
+    "lng": 2.3218,
+    "type": "Office",
+    "value": 29000000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 290000,
+    "soldCells": 130500,
+    "targetYield": 5.5,
+    "occupancy": 92.0,
+    "passport": 99,
+    "freshness": 93,
+    "area": 5085,
+    "review": "REVIEWED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Paris showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Review"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 36,
+    "slug": "marais-living-collection",
+    "name": "Marais Living Collection",
+    "city": "Paris",
+    "country": "France",
+    "lat": 48.7816,
+    "lng": 2.3522,
+    "type": "Mixed Use",
+    "value": 37700000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 377000,
+    "soldCells": 211120,
+    "targetYield": 3.8,
+    "occupancy": 93.3,
+    "passport": 96,
+    "freshness": 88,
+    "area": 5396,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "mixed use opportunity in Paris showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 37,
+    "slug": "bankenviertel-offices",
+    "name": "Bankenviertel Offices",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "lat": 50.14408,
+    "lng": 8.7125,
+    "type": "Office",
+    "value": 43000000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 430000,
+    "soldCells": 288100,
+    "targetYield": 5.5,
+    "occupancy": 94.6,
+    "passport": 93,
+    "freshness": 95,
+    "area": 5707,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Frankfurt showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 38,
+    "slug": "mitte-urban-living",
+    "name": "Mitte Urban Living",
+    "city": "Berlin",
+    "country": "Germany",
+    "lat": 52.51608,
+    "lng": 13.36017,
+    "type": "Serviced Living",
+    "value": 12000000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 120000,
+    "soldCells": 93600,
+    "targetYield": 3.8,
+    "occupancy": 95.9,
+    "passport": 98,
+    "freshness": 90,
+    "area": 6018,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Berlin showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 39,
+    "slug": "manhattan-midtown-offices",
+    "name": "Manhattan Midtown Offices",
+    "city": "New York",
+    "country": "USA",
+    "lat": 40.68541,
+    "lng": -73.9703,
+    "type": "Office",
+    "value": 19000000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 190000,
+    "soldCells": 169100,
+    "targetYield": 5.5,
+    "occupancy": 97.2,
+    "passport": 95,
+    "freshness": 97,
+    "area": 6329,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in New York showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 40,
+    "slug": "brooklyn-heights-living",
+    "name": "Brooklyn Heights Living",
+    "city": "New York",
+    "country": "USA",
+    "lat": 40.78666,
+    "lng": -74.01902,
+    "type": "Residential",
+    "value": 27700000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 277000,
+    "soldCells": 127420,
+    "targetYield": 3.8,
+    "occupancy": 98.5,
+    "passport": 92,
+    "freshness": 92,
+    "area": 6640,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "residential opportunity in New York showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 41,
+    "slug": "hudson-yards-collection",
+    "name": "Hudson Yards Collection",
+    "city": "New York",
+    "country": "USA",
+    "lat": 40.62424,
+    "lng": -74.06242,
+    "type": "Office",
+    "value": 36400000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 364000,
+    "soldCells": 207480,
+    "targetYield": 5.5,
+    "occupancy": 89.3,
+    "passport": 97,
+    "freshness": 99,
+    "area": 6951,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in New York showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 42,
+    "slug": "brickell-residences",
+    "name": "Brickell Residences",
+    "city": "Miami",
+    "country": "USA",
+    "lat": 25.77335,
+    "lng": -80.14833,
+    "type": "Serviced Living",
+    "value": 40000000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 400000,
+    "soldCells": 272000,
+    "targetYield": 3.8,
+    "occupancy": 90.6,
+    "passport": 94,
+    "freshness": 94,
+    "area": 7262,
+    "review": "REVIEWED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Miami showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Review"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 43,
+    "slug": "miami-beach-hospitality",
+    "name": "Miami Beach Hospitality",
+    "city": "Miami",
+    "country": "USA",
+    "lat": 25.79633,
+    "lng": -80.25833,
+    "type": "Hospitality",
+    "value": 48700000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 487000,
+    "soldCells": 384730,
+    "targetYield": 5.5,
+    "occupancy": 91.9,
+    "passport": 99,
+    "freshness": 89,
+    "area": 7573,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "hospitality opportunity in Miami showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 44,
+    "slug": "soma-innovation-offices",
+    "name": "SoMa Innovation Offices",
+    "city": "San Francisco",
+    "country": "USA",
+    "lat": 37.73261,
+    "lng": -122.40401,
+    "type": "Office",
+    "value": 16000000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 160000,
+    "soldCells": 144000,
+    "targetYield": 3.8,
+    "occupancy": 93.2,
+    "passport": 96,
+    "freshness": 96,
+    "area": 7884,
+    "review": "APPROVED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in San Francisco showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 45,
+    "slug": "century-city-offices",
+    "name": "Century City Offices",
+    "city": "Los Angeles",
+    "country": "USA",
+    "lat": 34.09377,
+    "lng": -118.22648,
+    "type": "Office",
+    "value": 23000000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 230000,
+    "soldCells": 108100,
+    "targetYield": 5.5,
+    "occupancy": 94.5,
+    "passport": 93,
+    "freshness": 91,
+    "area": 8195,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Los Angeles showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 46,
+    "slug": "castellana-prime-offices",
+    "name": "Castellana Prime Offices",
+    "city": "Madrid",
+    "country": "Spain",
+    "lat": 40.39778,
+    "lng": -3.74458,
+    "type": "Office",
+    "value": 30000000,
+    "cellPrice": 100,
+    "minCells": 20,
+    "totalCells": 300000,
+    "soldCells": 174000,
+    "targetYield": 3.8,
+    "occupancy": 95.8,
+    "passport": 98,
+    "freshness": 98,
+    "area": 8506,
+    "review": "APPROVED",
+    "tag": "High verification",
+    "gallery": [
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Madrid showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 47,
+    "slug": "eixample-living",
+    "name": "Eixample Living",
+    "city": "Barcelona",
+    "country": "Spain",
+    "lat": 41.37157,
+    "lng": 2.21632,
+    "type": "Serviced Living",
+    "value": 37000000,
+    "cellPrice": 100,
+    "minCells": 25,
+    "totalCells": 370000,
+    "soldCells": 255300,
+    "targetYield": 5.5,
+    "occupancy": 97.1,
+    "passport": 95,
+    "freshness": 93,
+    "area": 8817,
+    "review": "APPROVED",
+    "tag": "Core market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Barcelona showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 48,
+    "slug": "kafd-executive-offices",
+    "name": "KAFD Executive Offices",
+    "city": "Riyadh",
+    "country": "Saudi Arabia",
+    "lat": 24.75257,
+    "lng": 46.6528,
+    "type": "Office",
+    "value": 44000000,
+    "cellPrice": 100,
+    "minCells": 50,
+    "totalCells": 440000,
+    "soldCells": 352000,
+    "targetYield": 3.8,
+    "occupancy": 98.4,
+    "passport": 92,
+    "freshness": 88,
+    "area": 9128,
+    "review": "APPROVED",
+    "tag": "Income focus",
+    "gallery": [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in Riyadh showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 49,
+    "slug": "faria-lima-offices",
+    "name": "Faria Lima Offices",
+    "city": "S\u00e3o Paulo",
+    "country": "Brazil",
+    "lat": -23.59443,
+    "lng": -46.64304,
+    "type": "Office",
+    "value": 13000000,
+    "cellPrice": 100,
+    "minCells": 100,
+    "totalCells": 130000,
+    "soldCells": 118300,
+    "targetYield": 5.5,
+    "occupancy": 89.2,
+    "passport": 97,
+    "freshness": 95,
+    "area": 1839,
+    "review": "REVIEWED",
+    "tag": "New listing",
+    "gallery": [
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "office opportunity in S\u00e3o Paulo showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Review"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  },
+  {
+    "id": 50,
+    "slug": "v-a-waterfront-living",
+    "name": "V&A Waterfront Living",
+    "city": "Cape Town",
+    "country": "South Africa",
+    "lat": -33.89909,
+    "lng": 18.46096,
+    "type": "Serviced Living",
+    "value": 20000000,
+    "cellPrice": 100,
+    "minCells": 10,
+    "totalCells": 200000,
+    "soldCells": 96000,
+    "targetYield": 3.8,
+    "occupancy": 90.5,
+    "passport": 94,
+    "freshness": 90,
+    "area": 2150,
+    "review": "APPROVED",
+    "tag": "Cross-market",
+    "gallery": [
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1600&q=84",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=84"
+    ],
+    "thesis": "serviced living opportunity in Cape Town showcasing INTENT Living Property Passport, NEAR Testnet settlement with testnet NEAR, human review and governed AI property operations.",
+    "checks": [
+      {
+        "name": "Title",
+        "status": "Verified"
+      },
+      {
+        "name": "Documents",
+        "status": "Verified"
+      },
+      {
+        "name": "Valuation",
+        "status": "Verified"
+      },
+      {
+        "name": "Inspection",
+        "status": "Verified"
+      },
+      {
+        "name": "Compliance",
+        "status": "Verified"
+      }
+    ],
+    "nearEnabled": false,
+    "nearCellPrice": 1
+  }
+]

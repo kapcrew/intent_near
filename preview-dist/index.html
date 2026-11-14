@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#334CDB">
+<title>INTENT × NEAR | Property Network · Testnet</title>
+<meta name="description" content="INTENT Property Network — NEAR Testnet property passport, onchain Property Cells, and governed property agents.">
+<link rel="icon" href="./assets/intent-icon-blue.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./skale.css"><link rel="stylesheet" href="./circle.css"><link rel="stylesheet" href="./identity.css"><link rel="stylesheet" href="./blue.css">
+<link rel="stylesheet" href="./near.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#discover" aria-label="INTENT Property Network home"><img class="intent-wordmark" src="./assets/intent-wordmark-light.svg" alt="INTENT Property Network" width="180" height="44"></a>
+<nav class="nav" aria-label="Primary navigation">
+<button data-view="discover" class="active">Discover</button>
+<button data-view="settlement">Settlement</button>
+<button data-view="agent">Agent Operations</button>
+<button data-view="passport">Passport</button>
+<button data-view="portfolio">Portfolio</button>
+<button data-view="partners">Partners</button>
+<button data-view="architecture">Architecture</button>
+</nav>
+<div class="top-actions"><span class="network-pill"><i></i>NEAR TESTNET</span><button id="themeToggle" class="theme-toggle" type="button" title="Toggle light / dark">◐</button><button id="walletBtn" class="wallet-btn">Read-only preview</button></div>
+</header><div style="padding:9px 22px;background:#fff4dc;color:#5b3e0c;text-align:center">READ-ONLY visual preview. For actual NEAR wallet interactions build with Vite: npm run web:install &amp;&amp; npm run web:dev</div>
+<main id="app"><div class="shell page"><p>Loading property network…</p></div></main>
+<div id="toast" class="toast" aria-live="polite"></div>
+<footer class="site-footer"><img class="footer-wordmark" src="./assets/intent-wordmark-light.svg" alt="INTENT" width="180" height="44"><span>Property Network · NEAR Testnet MVP · Not a financial product</span><a href="mailto:welcome@pixudi.com">Contact ↗</a></footer>
+<script src="./assets/d3.js"></script><script src="./assets/topojson.js"></script><script src="./partners-data.js"></script><script src="./skale-partners.js"></script>
+<script type="module" src="./preview.js"></script>
+</body></html>

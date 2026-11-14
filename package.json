@@ -1,0 +1,17 @@
+{
+  "name":"intent-near-testnet-hackathon",
+  "version":"1.0.0",
+  "private":true,
+  "type":"module",
+  "scripts":{
+    "web:install":"npm install --prefix web",
+    "web:dev":"npm run dev --prefix web",
+    "web:build":"npm run build --prefix web",
+    "web:preview":"npm run preview --prefix web",
+    "check":"node scripts/check-static.mjs && node scripts/verify-archive.mjs && node --test tests/*.test.mjs",
+    "deploy:near":"node --env-file=.env scripts/deploy-testnet.mjs --yes",
+    "seed:near":"node --env-file=.env scripts/seed-testnet.mjs --yes",
+    "configure:near":"node --env-file=.env scripts/write-deployments.mjs",
+    "smoke:near":"node scripts/smoke-testnet.mjs"
+  }
+}

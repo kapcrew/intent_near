@@ -1,0 +1,17 @@
+{
+  "name": "intent-near-testnet-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@near-wallet-selector/core": "^10.0.0",
+    "@near-wallet-selector/modal-ui": "^10.0.0",
+    "@near-wallet-selector/my-near-wallet": "^10.0.0"
+  },
+  "devDependencies": { "vite": "^7.1.0" }
+}

@@ -1,0 +1,15 @@
+INTENT NEAR Testnet Edition — Code licensing note
+
+The newly authored demonstration code under contracts/, scripts/, and web/src/
+is supplied for review, adaptation and testing by the recipient.
+
+This package includes pre-existing material supplied by the project owner:
+web/public/ original website assets, data, map scripts, logos and font files;
+and legacy_reference/lineage_solidity/ historical contract sources.
+Their underlying ownership, licenses, trademarks and third-party terms remain unchanged.
+Do not assume that those materials are open source or MIT licensed based only
+on their presence in this distribution. Third-party package license terms
+are governed by their respective upstream distributions.
+
+No warranty: this is unaudited, uncompiled contract demonstration source, not
+investment, legal, security, or production deployment advice.

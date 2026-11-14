@@ -24,6 +24,26 @@ let props=[], cfg={}, selector=null, modal=null, account='', balance='—', acti
 let chosen = num(localStorage.getItem(saveKey) || 1), listings=[], chainProperties=[], evidence=[], agent=null, receipts=[];
 let holdings={}, busy=false, logs=[];
 let filter='all', catalogExpanded=false;
+// Read-only chain state is intentionally independent of wallet/extension initialization.
+// 'unknown' / 'error' must never be displayed as 'not registered'.
+let chainStatus={registry:'loading',settlement:'loading',policy:'loading'};
+let chainErrors={};
+let walletError='';
+let refreshSerial=0;
+function chainBadge(kind,exists,positive,negative){
+ if(chainStatus[kind]==='loading')return statusBadge(false,'',`Loading ${kind} from NEAR…`);
+ if(chainStatus[kind]==='error')return statusBadge(false,'',`${kind} RPC unavailable`);
+ return statusBadge(exists,positive,negative);
+}
+function chainUnavailable(kind,none){
+ return chainStatus[kind]==='ready'?none:chainStatus[kind]==='error'?`Unable to read ${kind} contract (check RPC status)`:`Loading ${kind} from NEAR…`;
+}
+function rpcWarning(){
+ const entries=Object.entries(chainErrors);
+ if(!entries.length)return '';
+ return `<div class="shell" role="alert" style="margin:14px auto 0;padding:14px 18px;border-radius:14px;background:#fff3e8;border:1px solid #efcda3;color:#6a4216"><strong>NEAR Testnet data could not be loaded.</strong> This does not mean the properties are unregistered. ${entries.map(([kind,message])=>`<div style="margin-top:5px"><b>${esc(kind)}:</b> ${esc(message)}</div>`).join('')}<button type="button" class="outline" data-chain-refresh style="margin-top:10px">Retry onchain reads</button></div>`;
+}
+
 const app = $('#app');
 const DEPLOYMENT_FIELDS = {registry:'registry',settlement:'settlement',policy:'policy'};
 function toast(message) {
@@ -42,14 +62,15 @@ function walletGate(msg='Connect a NEAR Testnet wallet to authorize transactions
 function render() {
  active=viewFromHash();$$('.nav [data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===active));
  if(!props.length){app.innerHTML='<div class="shell page">Loading property catalogue…</div>';return}
- if(active==='partners'){window.INTENT_SKALE_PARTNERS?.render(app);return}
- if(active==='discover')return renderDiscover();
- if(active==='property')return renderProperty();
- if(active==='settlement')return renderSettlement();
- if(active==='agent')return renderAgent();
- if(active==='passport')return renderPassport();
- if(active==='portfolio')return renderPortfolio();
- if(active==='architecture')return renderArchitecture();
+ if(active==='partners')window.INTENT_SKALE_PARTNERS?.render(app);
+ else if(active==='discover')renderDiscover();
+ else if(active==='property')renderProperty();
+ else if(active==='settlement')renderSettlement();
+ else if(active==='agent')renderAgent();
+ else if(active==='passport')renderPassport();
+ else if(active==='portfolio')renderPortfolio();
+ else if(active==='architecture')renderArchitecture();
+ if(Object.keys(chainErrors).length)app.insertAdjacentHTML('afterbegin',rpcWarning());
 }
 function setRoute(route){location.hash=route;if(location.hash==='#'+route)render();window.scrollTo({top:0,behavior:'smooth'})}
 function selectProperty(id, screen='property'){chosen=num(id);localStorage.setItem(saveKey,String(chosen));setRoute(screen==='property'?`property/${chosen}`:screen);if(screen==='passport')loadEvidence(chosen)}
@@ -99,14 +120,14 @@ function renderHomepageStory(){
  </div>`;
 }
 
-function renderDiscover(){app.innerHTML=`<div class="shell page"><section class="hero"><div class="hero-copy"><div class="eyebrow">Property infrastructure · NEAR Testnet</div><h1>Property verification<br><span>with programmable settlement</span></h1><p>Living Property Passports, human review, testnet Property Cell purchases and policy-governed AI agents — rebuilt using native NEAR smart contracts.</p><div class="hero-actions"><button class="primary" data-viewgo="settlement">Explore settlement</button><button class="ghost" data-viewgo="architecture">Explore architecture</button></div><div class="hero-caption-note">NEAR Testnet · Signed wallet transactions · No real property ownership</div><div class="hero-kpis"><div><b>50</b><span>catalogue properties</span></div><div><b>117</b><span>ecosystem organizations</span></div><div><b>3</b><span>native NEAR contracts</span></div></div></div><div class="hero-visual"><img src="/assets/courtyard.png" alt="Concept rendering of residential property"><div class="hero-property"><small>Architectural concept · sample property</small></div></div></section><section class="cooperation-ribbon" aria-label="Institutional cooperation"><div><div class="eyebrow">Institutional cooperation</div><p>Japan and South Korea.<br>Proposed testnet property lifecycle pilots.</p></div><a class="cooperation-logo" href="https://www.tokyu-land.co.jp/english/" target="_blank"><img src="/assets/tokyu-land.svg" alt="Tokyu Land Corporation"><small>Tokyu Land Corporation · Japan ↗</small></a><a class="cooperation-logo" href="https://www.kait.com/" target="_blank"><img src="/assets/kait.png" alt="Korea Asset In Trust"><small>Korea Asset In Trust · South Korea ↗</small></a></section><p class="near-note">Catalogue and imagery are illustrative. The directory is a list of prospective ecosystem organizations, not a claim that every organization is an INTENT partner.</p><div class="status-ribbon">${statusBadge(isReady('registry'),'Registry configured','Registry undeployed')}${statusBadge(isReady('settlement'),'Settlement configured','Settlement undeployed')}${statusBadge(isReady('policy'),'Agent policy configured','Policy undeployed')}</div><section class="section"><div class="section-head"><div><div class="eyebrow">Search real-estate opportunities</div><h2>Property catalogue</h2></div><p>50 reference properties; ${listings.length} currently registered NEAR settlement listings.</p></div><div class="toolbar"><input id="catalogSearch" placeholder="Search city, asset or country" aria-label="Search catalogue"><select id="catalogCountry"><option value="">All countries</option>${[...new Set(props.map(p=>p.country))].sort().map(c=>`<option>${esc(c)}</option>`).join('')}</select><button class="outline" id="showListed">${filter==='listed'?'Show all':'Show listed only'}</button></div><div id="propertyGrid" class="property-grid ${catalogExpanded?'expanded':''}">${propertyCards(filter==='listed'?props.filter(p=>findListing(p.id)):props)}</div><div class="near-actions"><button class="outline" id="showAll">${catalogExpanded?'Show featured properties':'Show all 50 properties'}</button></div></section></div>`;
+function renderDiscover(){app.innerHTML=`<div class="shell page"><section class="hero"><div class="hero-copy"><div class="eyebrow">Property infrastructure · NEAR Testnet</div><h1>Property verification<br><span>with programmable settlement</span></h1><p>Living Property Passports, human review, testnet Property Cell purchases and policy-governed AI agents — rebuilt using native NEAR smart contracts.</p><div class="hero-actions"><button class="primary" data-viewgo="settlement">Explore settlement</button><button class="ghost" data-viewgo="architecture">Explore architecture</button></div><div class="hero-caption-note">NEAR Testnet · Signed wallet transactions · No real property ownership</div><div class="hero-kpis"><div><b>50</b><span>catalogue properties</span></div><div><b>117</b><span>ecosystem organizations</span></div><div><b>3</b><span>native NEAR contracts</span></div></div></div><div class="hero-visual"><img src="/assets/courtyard.png" alt="Concept rendering of residential property"><div class="hero-property"><small>Architectural concept · sample property</small></div></div></section><section class="cooperation-ribbon" aria-label="Institutional cooperation"><div><div class="eyebrow">Institutional cooperation</div><p>Japan and South Korea.<br>Proposed testnet property lifecycle pilots.</p></div><a class="cooperation-logo" href="https://www.tokyu-land.co.jp/english/" target="_blank"><img src="/assets/tokyu-land.svg" alt="Tokyu Land Corporation"><small>Tokyu Land Corporation · Japan ↗</small></a><a class="cooperation-logo" href="https://www.kait.com/" target="_blank"><img src="/assets/kait.png" alt="Korea Asset In Trust"><small>Korea Asset In Trust · South Korea ↗</small></a></section><p class="near-note">Catalogue and imagery are illustrative. The directory is a list of prospective ecosystem organizations, not a claim that every organization is an INTENT partner.</p><div class="status-ribbon">${statusBadge(isReady('registry'),'Registry configured','Registry undeployed')}${statusBadge(isReady('settlement'),'Settlement configured','Settlement undeployed')}${statusBadge(isReady('policy'),'Agent policy configured','Policy undeployed')}</div><section class="section"><div class="section-head"><div><div class="eyebrow">Search real-estate opportunities</div><h2>Property catalogue</h2></div><p>50 reference properties; ${chainStatus.settlement==='ready'?`${listings.length} active NEAR settlement records`:'Checking live NEAR listings…'}.</p></div><div class="toolbar"><input id="catalogSearch" placeholder="Search city, asset or country" aria-label="Search catalogue"><select id="catalogCountry"><option value="">All countries</option>${[...new Set(props.map(p=>p.country))].sort().map(c=>`<option>${esc(c)}</option>`).join('')}</select><button class="outline" id="showListed">${filter==='listed'?'Show all':'Show listed only'}</button></div><div id="propertyGrid" class="property-grid ${catalogExpanded?'expanded':''}">${propertyCards(filter==='listed'?props.filter(p=>findListing(p.id)):props)}</div><div class="near-actions"><button class="outline" id="showAll">${catalogExpanded?'Show featured properties':'Show all 50 properties'}</button></div></section></div>`;
  // Insert both original design sections beneath the catalogue / Show all button.
  $('#propertyGrid').closest('.section').insertAdjacentHTML('afterend',renderHomepageStory());
  const catalog=()=>{const q=$('#catalogSearch').value.trim().toLowerCase(),c=$('#catalogCountry').value;const arr=props.filter(p=>(filter==='listed'?!!findListing(p.id):true)&&(!q||`${p.name} ${p.city} ${p.country} ${p.type}`.toLowerCase().includes(q))&&(!c||p.country===c));$('#propertyGrid').innerHTML=propertyCards(arr);};
  $('#catalogSearch').oninput=catalog;$('#catalogCountry').onchange=catalog;$('#showListed').onclick=()=>{filter=filter==='listed'?'all':'listed';render()};$('#showAll').onclick=()=>{catalogExpanded=!catalogExpanded;const grid=$('#propertyGrid');grid.classList.toggle('expanded',catalogExpanded);$('#showAll').textContent=catalogExpanded?'Show featured properties':'Show all 50 properties';if(!catalogExpanded)window.scrollTo({top:Math.max(0,grid.getBoundingClientRect().top+scrollY-125),behavior:'smooth'});};
 }
-function renderProperty(){const p=selected(),l=findListing(p.id),r=findRecord(p.id);app.innerHTML=`<div class="shell page"><div class="section-head"><div><div class="eyebrow">Living Property Passport · ${esc(p.city)}, ${esc(p.country)}</div><h2>${esc(p.name)}</h2></div><div class="near-cta"><button class="outline" data-viewgo="discover">All properties</button><button class="primary" data-viewgo="passport">Open Passport</button></div></div><div class="near-grid"><section class="panel"><img class="near-detail-image" src="${esc(p.gallery?.[0])}" alt="${esc(p.name)}"><p class="near-note">Concept image and sample numbers. Do not interpret as investment terms or title evidence.</p><div class="near-grid"><div class="near-kpi"><small>Illustrative value</small><b>${money(p.value)}</b></div><div class="near-kpi"><small>Reference target yield</small><b>${esc(p.targetYield)}%</b></div><div class="near-kpi"><small>Sample occupancy</small><b>${esc(p.occupancy)}%</b></div></div><p>${esc(p.thesis||'')}</p></section><section class="panel"><h3>Onchain verification</h3><p>Registry: ${contractAnchor('registry')}</p><p>${statusBadge(!!r,'Property registered','Awaiting onchain registration')}</p><div class="near-divider"></div><div class="near-record"><b>Human review</b><small>${esc(r?.review_status||'Not registered')} · ${esc(r?.reviewed_by||'No reviewer onchain')}</small></div><div class="near-record"><b>Passport evidence</b><small>${r?'Open Passport to read immutable hash attestations':'No onchain evidence yet'}</small></div><div class="near-record"><b>Property Cells</b><small>${l?`${l.sold_cells} / ${l.total_cells} issued · ${fromYocto(l.price_yocto)} testnet NEAR per Cell`:'No NEAR Testnet listing yet'}</small></div><div class="near-actions"><button class="primary" data-viewgo="settlement" ${l?'':'disabled'}>Open settlement</button><button class="outline" data-viewgo="passport">Review evidence</button></div></section></div></div>`}
-function renderSettlement(){const available=listings.filter(l=>l.active);const p=selected();const l=findListing(p.id);const chosenListing=l||available[0];const effective=chosenListing?props.find(x=>x.id===num(chosenListing.property_id))||p:p;const currentHolding=num(holdings[effective.id]||0);const cost=chosenListing?fromYocto(chosenListing.price_yocto):'0';app.innerHTML=`<div class="shell page"><div class="section-head"><div><div class="eyebrow">Native NEAR · Testnet-only</div><h2>Property Cell Settlement</h2></div><p>Wallet-signed purchases settle in native testnet NEAR. Every purchase changes an auditable contract-held balance.</p></div><div class="near-banner">Purchases use native NEAR Testnet tokens: each purchase is one wallet-signed transaction with an exact attached deposit.</div><section class="near-grid"><div class="panel near-stack"><h3>Purchase Property Cells</h3><img class="near-detail-image" src="${esc(effective.gallery?.[0])}" alt="${esc(effective.name)}"><form id="purchaseForm" class="near-form"><label>Property listing<select id="settlementProperty">${available.map(x=>{const pr=props.find(p=>p.id===num(x.property_id));return`<option value="${x.property_id}" ${num(x.property_id)===effective.id?'selected':''}>${esc(pr?.name||'Property '+x.property_id)}</option>`}).join('')||'<option>No listings deployed</option>'}</select></label><label>Cells to buy (1–100)<input type="number" min="1" max="100" id="cellQuantity" value="1" required></label><div class="near-grid"><div class="near-kpi"><small>Price / Cell</small><b>${cost} NEAR</b></div><div class="near-kpi"><small>Your holding</small><b>${currentHolding} Cells</b></div></div><p class="near-meta" id="settlementCost">Total: ${cost} testnet NEAR + gas</p><button class="primary" type="submit" ${!account||!chosenListing||busy?'disabled':''}>Buy Cells on NEAR</button></form>${!account?walletGate('Connect your wallet before purchasing'):''}<p class="near-meta">Contract: ${contractAnchor('settlement')}</p></div><aside class="panel near-stack"><h3>Live transaction console</h3><p>Your wallet must authorize every state-changing operation. Wait for final confirmation before reloading holdings.</p><pre id="nearConsole" class="near-console">${esc(logs.map(l=>`[${l.time}] ${l.text}`).join('\n')||'Ready to submit a NEAR Testnet transaction.')}</pre><div class="near-actions"><button class="outline" id="refreshSettlement">Refresh state</button><a href="${esc(cfg.faucetUrl||'https://near-faucet.io')}" target="_blank" rel="noopener">Testnet NEAR faucet ↗</a></div><div class="near-divider"></div><h3>Issuer controls</h3><p class="near-meta">Only the settlement contract owner may configure property listings.</p><form class="near-form" id="listingForm"><label>Property ID<select id="listingPropertyId">${props.filter(x=>x.nearEnabled).map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}</select></label><label>Testnet NEAR price per Cell<input id="listingPrice" value="0.01" required></label><label>Total supply<input id="listingSupply" type="number" value="1000" min="1" max="1000000" required></label><button type="submit" class="outline" ${!account||!isReady('settlement')?'disabled':''}>Configure listing (owner)</button></form></aside></section></div>`;
+function renderProperty(){const p=selected(),l=findListing(p.id),r=findRecord(p.id);app.innerHTML=`<div class="shell page"><div class="section-head"><div><div class="eyebrow">Living Property Passport · ${esc(p.city)}, ${esc(p.country)}</div><h2>${esc(p.name)}</h2></div><div class="near-cta"><button class="outline" data-viewgo="discover">All properties</button><button class="primary" data-viewgo="passport">Open Passport</button></div></div><div class="near-grid"><section class="panel"><img class="near-detail-image" src="${esc(p.gallery?.[0])}" alt="${esc(p.name)}"><p class="near-note">Concept image and sample numbers. Do not interpret as investment terms or title evidence.</p><div class="near-grid"><div class="near-kpi"><small>Illustrative value</small><b>${money(p.value)}</b></div><div class="near-kpi"><small>Reference target yield</small><b>${esc(p.targetYield)}%</b></div><div class="near-kpi"><small>Sample occupancy</small><b>${esc(p.occupancy)}%</b></div></div><p>${esc(p.thesis||'')}</p></section><section class="panel"><h3>Onchain verification</h3><p>Registry: ${contractAnchor('registry')}</p><p>${chainBadge('registry',!!r,'Property registered','Awaiting onchain registration')}</p><div class="near-divider"></div><div class="near-record"><b>Human review</b><small>${esc(r?.review_status||chainUnavailable('registry','Not registered'))} · ${esc(r?.reviewed_by||'No reviewer onchain')}</small></div><div class="near-record"><b>Passport evidence</b><small>${r?'Open Passport to read immutable hash attestations':chainUnavailable('registry','No onchain evidence yet')}</small></div><div class="near-record"><b>Property Cells</b><small>${l?`${l.sold_cells} / ${l.total_cells} issued · ${fromYocto(l.price_yocto)} testnet NEAR per Cell`:chainUnavailable('settlement','No NEAR Testnet listing yet')}</small></div><div class="near-actions"><button class="primary" data-viewgo="settlement" ${l?'':'disabled'}>Open settlement</button><button class="outline" data-viewgo="passport">Review evidence</button></div></section></div></div>`}
+function renderSettlement(){const available=listings.filter(l=>l.active);const p=selected();const l=findListing(p.id);const chosenListing=l||available[0];const effective=chosenListing?props.find(x=>x.id===num(chosenListing.property_id))||p:p;const currentHolding=num(holdings[effective.id]||0);const cost=chosenListing?fromYocto(chosenListing.price_yocto):'0';app.innerHTML=`<div class="shell page"><div class="section-head"><div><div class="eyebrow">Native NEAR · Testnet-only</div><h2>Property Cell Settlement</h2></div><p>Wallet-signed purchases settle in native testnet NEAR. Every purchase changes an auditable contract-held balance.</p></div><div class="near-banner">Purchases use native NEAR Testnet tokens: each purchase is one wallet-signed transaction with an exact attached deposit.</div><section class="near-grid"><div class="panel near-stack"><h3>Purchase Property Cells</h3><img class="near-detail-image" src="${esc(effective.gallery?.[0])}" alt="${esc(effective.name)}"><form id="purchaseForm" class="near-form"><label>Property listing<select id="settlementProperty">${available.map(x=>{const pr=props.find(p=>p.id===num(x.property_id));return`<option value="${x.property_id}" ${num(x.property_id)===effective.id?'selected':''}>${esc(pr?.name||'Property '+x.property_id)}</option>`}).join('')||`<option>${esc(chainUnavailable('settlement','No listings available'))}</option>`}</select></label><label>Cells to buy (1–100)<input type="number" min="1" max="100" id="cellQuantity" value="1" required></label><div class="near-grid"><div class="near-kpi"><small>Price / Cell</small><b>${cost} NEAR</b></div><div class="near-kpi"><small>Your holding</small><b>${currentHolding} Cells</b></div></div><p class="near-meta" id="settlementCost">Total: ${cost} testnet NEAR + gas</p><button class="primary" type="submit" ${!account||!chosenListing||busy?'disabled':''}>Buy Cells on NEAR</button></form>${!account?walletGate('Connect your wallet before purchasing'):''}<p class="near-meta">Contract: ${contractAnchor('settlement')}</p></div><aside class="panel near-stack"><h3>Live transaction console</h3><p>Your wallet must authorize every state-changing operation. Wait for final confirmation before reloading holdings.</p><pre id="nearConsole" class="near-console">${esc(logs.map(l=>`[${l.time}] ${l.text}`).join('\n')||'Ready to submit a NEAR Testnet transaction.')}</pre><div class="near-actions"><button class="outline" id="refreshSettlement">Refresh state</button><a href="${esc(cfg.faucetUrl||'https://near-faucet.io')}" target="_blank" rel="noopener">Testnet NEAR faucet ↗</a></div><div class="near-divider"></div><h3>Issuer controls</h3><p class="near-meta">Only the settlement contract owner may configure property listings.</p><form class="near-form" id="listingForm"><label>Property ID<select id="listingPropertyId">${props.filter(x=>x.nearEnabled).map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join('')}</select></label><label>Testnet NEAR price per Cell<input id="listingPrice" value="0.01" required></label><label>Total supply<input id="listingSupply" type="number" value="1000" min="1" max="1000000" required></label><button type="submit" class="outline" ${!account||!isReady('settlement')?'disabled':''}>Configure listing (owner)</button></form></aside></section></div>`;
  $('#settlementProperty')?.addEventListener('change',e=>selectProperty(e.target.value,'settlement'));
  $('#cellQuantity')?.addEventListener('input',e=>{const quantity=Math.max(0,num(e.target.value));$('#settlementCost').textContent=`Total: ${chosenListing?fromYocto((BigInt(chosenListing.price_yocto)*BigInt(Math.floor(quantity))).toString()):'0'} testnet NEAR + gas`});
  $('#purchaseForm').onsubmit=async e=>{e.preventDefault();const quantity=Number($('#cellQuantity').value);if(!Number.isSafeInteger(quantity)||quantity<1||quantity>100)return toast('Choose between 1 and 100 Cells');if(!chosenListing)return toast('No onchain listings yet');const cost=(BigInt(chosenListing.price_yocto)*BigInt(quantity)).toString();await submit('settlement','buy_cells',{property_id:num(chosenListing.property_id),quantity},cost);};
@@ -136,13 +157,13 @@ function renderPassport(){
    </article>
    <aside class="panel near-passport-checks"><h3>Verification modules</h3><p class="near-reference-caption">Catalogue reference indicators; they are not independently verified onchain.</p>
     <div class="checks">${(p.checks||[]).map(c=>`<details class="check-detail"><summary><span class="check-icon">✓</span><span><b>${esc(c.name)}</b><small>View verification scope</small></span><span class="check-status">${esc(c.status)}</span><span class="check-chevron" aria-hidden="true">⌄</span></summary><div class="check-description"><p>${esc(checkDescriptions[c.name]||'Supporting property information.')}</p><small>Reference catalogue information, not legal due diligence or a blockchain attestation.</small></div></details>`).join('')}</div>
-    <div class="near-onchain-summary"><div class="eyebrow">Verified on NEAR Testnet</div><div class="near-actions">${statusBadge(!!r,'Registry record exists','Awaiting registration')}${statusBadge(r?.review_status==='APPROVED','Human review approved','Review pending / unapproved')}</div><small>Registry: ${contractAnchor('registry')}</small></div>
+    <div class="near-onchain-summary"><div class="eyebrow">Verified on NEAR Testnet</div><div class="near-actions">${chainBadge('registry',!!r,'Registry record exists','Awaiting registration')}${chainBadge('registry',r?.review_status==='APPROVED','Human review approved','Review pending / unapproved')}</div><small>Registry: ${contractAnchor('registry')}</small></div>
    </aside>
   </section>
   <p class="near-reference-caption near-passport-note">*Reference imagery, values, scores and property checks are illustrative. Only transactions and hashes displayed below are sourced from NEAR Testnet.</p>
   <section class="near-passport-ledger section"><div class="section-head"><div><div class="eyebrow">Proof and lineage</div><h2>Onchain Passport record</h2></div><p>Stored on ${contractAnchor('registry')}. Every review or evidence addition requires a signed transaction.</p></div>
-   <div class="near-grid"><article class="panel near-stack"><h3>${esc(p.name)} · Onchain state</h3><div class="near-actions">${statusBadge(!!r,'Registered','Not registered')}${statusBadge(r?.review_status==='APPROVED','Approved','Pending / rejected')}</div><div class="near-record"><b>Property metadata SHA-256</b><small class="near-tx">${esc(r?.metadata_hash||'Not registered')}</small></div><div class="near-record"><b>Reviewer</b><small>${esc(r?.reviewed_by||'Not yet assigned')}</small></div><div class="near-record"><b>Review timestamp (UTC)</b><small>${esc(r?.reviewed_at_ns?new Date(Number(BigInt(r.reviewed_at_ns)/1000000n)).toISOString():'—')}</small></div><h3>Evidence history (${e.length})</h3><div class="near-list">${e.length?e.map(x=>`<div class="near-record"><b>#${x.id} · ${esc(x.kind)}</b><small class="near-tx">${esc(x.content_hash)}</small><small>Attested by ${esc(x.author)}</small></div>`).join(''):'<p class="near-meta">No evidence attestations recorded on NEAR Testnet yet.</p>'}</div></article>
-   <article class="panel near-stack"><h3>Record property</h3><p class="near-meta">Owner registration stores the SHA-256 digest of reference metadata, not an authenticity guarantee.</p><button class="primary" id="registryRegister" ${!account||!hasReg||r?'disabled':''}>Register selected property</button><div class="near-divider"></div><h3>Human review</h3><form class="near-form" id="reviewForm"><label>Review decision<select id="reviewApproved"><option value="true">Approve</option><option value="false">Reject</option></select></label><label>Review note<textarea id="reviewNote" placeholder="What was examined, what needs follow-up?" required></textarea></label><button class="outline" ${!account||!hasReg||!r?'disabled':''}>Commit reviewer decision</button></form><div class="near-divider"></div><h3>Append evidence</h3><form class="near-form" id="evidenceForm"><label>Evidence type<select id="evidenceKind"><option>Valuation</option><option>Inspection</option><option>Compliance</option><option>Document</option><option>Agent Report</option><option>Settlement</option></select></label><label>Evidence reference / description<textarea id="evidenceText" placeholder="Reference text or non-confidential note (SHA-256 generated locally)" required></textarea></label><button class="outline" ${!account||!hasReg||!r?'disabled':''}>Append evidence SHA-256</button></form></article></div>
+   <div class="near-grid"><article class="panel near-stack"><h3>${esc(p.name)} · Onchain state</h3><div class="near-actions">${chainBadge('registry',!!r,'Registered','Not registered')}${chainBadge('registry',r?.review_status==='APPROVED','Approved','Pending / rejected')}</div><div class="near-record"><b>Property metadata SHA-256</b><small class="near-tx">${esc(r?.metadata_hash||chainUnavailable('registry','Not registered'))}</small></div><div class="near-record"><b>Reviewer</b><small>${esc(r?.reviewed_by||'Not yet assigned')}</small></div><div class="near-record"><b>Review timestamp (UTC)</b><small>${esc(r?.reviewed_at_ns?new Date(Number(BigInt(r.reviewed_at_ns)/1000000n)).toISOString():'—')}</small></div><h3>Evidence history (${e.length})</h3><div class="near-list">${e.length?e.map(x=>`<div class="near-record"><b>#${x.id} · ${esc(x.kind)}</b><small class="near-tx">${esc(x.content_hash)}</small><small>Attested by ${esc(x.author)}</small></div>`).join(''):'<p class="near-meta">No evidence attestations recorded on NEAR Testnet yet.</p>'}</div></article>
+   <article class="panel near-stack">${!account?`<div class="near-banner"><b>Wallet not connected.</b> Read-only Passport data is available without signing. To review or add evidence, <button class="outline" data-wallet type="button">Connect Meteor Wallet</button>${walletError?`<small>${esc(walletError)}</small>`:''}</div>`:''}<h3>Record property</h3><p class="near-meta">Owner registration stores the SHA-256 digest of reference metadata, not an authenticity guarantee.</p><button class="primary" id="registryRegister" ${!account||!hasReg||r?'disabled':''}>Register selected property</button><div class="near-divider"></div><h3>Human review</h3><form class="near-form" id="reviewForm"><label>Review decision<select id="reviewApproved"><option value="true">Approve</option><option value="false">Reject</option></select></label><label>Review note<textarea id="reviewNote" placeholder="What was examined, what needs follow-up?" required></textarea></label><button class="outline" ${!account||!hasReg||!r?'disabled':''}>Commit reviewer decision</button></form><div class="near-divider"></div><h3>Append evidence</h3><form class="near-form" id="evidenceForm"><label>Evidence type<select id="evidenceKind"><option>Valuation</option><option>Inspection</option><option>Compliance</option><option>Document</option><option>Agent Report</option><option>Settlement</option></select></label><label>Evidence reference / description<textarea id="evidenceText" placeholder="Reference text or non-confidential note (SHA-256 generated locally)" required></textarea></label><button class="outline" ${!account||!hasReg||!r?'disabled':''}>Append evidence SHA-256</button></form></article></div>
   </section>
  </div>`;
  $('#passportProperty').onchange=e=>selectProperty(e.target.value,'passport');
@@ -163,24 +184,92 @@ function renderArchitecture(){app.innerHTML=`<div class="shell page"><div class=
  $('#checkChain').onclick=refreshAll;$('#reviewerForm').onsubmit=async e=>{e.preventDefault();await submit('registry',$('#reviewerRole').value,{account_id:$('#reviewerAccount').value.trim(),enabled:$('#reviewerAllowed').value==='true'});};
 }
 async function digest(text){const data=new TextEncoder().encode(String(text));const hash=await crypto.subtle.digest('SHA-256',data);return [...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-async function rpc(method,params){const res=await fetch(cfg.rpcUrl||'https://rpc.testnet.near.org',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:'intent-near',method,params})});if(!res.ok)throw Error(`NEAR RPC HTTP ${res.status}`);const data=await res.json();if(data.error)throw Error(data.error.message||'RPC error');return data.result}
+// The legacy rpc.testnet.near.org public endpoint is deprecated and may reject
+// browser-origin requests. Use key-free community Testnet RPCs, with fallback.
+// Never silently convert an RPC transport failure into an empty onchain record.
+async function rpc(method, params) {
+ const endpoints = [...new Set([
+  cfg.rpcUrl || 'https://test.rpc.fastnear.com',
+  ...(Array.isArray(cfg.rpcFallbackUrls) ? cfg.rpcFallbackUrls : ['https://near-testnet.drpc.org'])
+ ].filter(url => typeof url === 'string' && /^https:\/\//.test(url)))];
+ const body = JSON.stringify({ jsonrpc: '2.0', id: 'intent-near', method, params });
+ const failures = [];
+ for (const url of endpoints) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  try {
+   const response = await fetch(url, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body, signal: controller.signal, mode: 'cors'
+   });
+   if (!response.ok) {
+    failures.push(`${url} → HTTP ${response.status}`);
+    continue;
+   }
+   const data = await response.json();
+   if (data.error) {
+    // A genuine contract/method failure is not a transport outage.
+    throw new Error(`NEAR JSON-RPC error on ${url}: ${data.error.message || JSON.stringify(data.error)}`);
+   }
+   if (!Object.prototype.hasOwnProperty.call(data, 'result')) {
+    failures.push(`${url} → invalid JSON-RPC response`);
+    continue;
+   }
+   cfg.lastSuccessfulRpc = url;
+   return data.result;
+  } catch (error) {
+   if (String(error?.message || '').startsWith('NEAR JSON-RPC error')) throw error;
+   failures.push(`${url} → ${error?.name === 'AbortError' ? 'timeout' : (error?.message || 'network error')}`);
+  } finally {
+   clearTimeout(timeout);
+  }
+ }
+ throw new Error(`All NEAR Testnet RPC endpoints failed. ${failures.join(' | ')}. Check Chrome DevTools > Network for CORS, CSP, or extension blocks.`);
+}
 async function view(kind,method,args={}) {if(!isReady(kind))return null;const bytes=new TextEncoder().encode(JSON.stringify(args));const encoded=btoa(Array.from(bytes,b=>String.fromCharCode(b)).join(''));const result=await rpc('query',{request_type:'call_function',finality:'final',account_id:cfg[kind],method_name:method,args_base64:encoded});return JSON.parse(new TextDecoder().decode(new Uint8Array(result.result))||'null')}
 async function readBalance(id){if(!id)return'—';const r=await rpc('query',{request_type:'view_account',finality:'final',account_id:id});return fromYocto(r.amount)+' NEAR'}
-async function refreshAll(){try{const values=await Promise.allSettled([
- view('settlement','get_listings'),view('registry','get_properties'),
- account?view('policy','get_agent',{account_id:account}):Promise.resolve(null),
- view('policy','get_recent_receipts'),
- account?readBalance(account):Promise.resolve('—')
- ]);
- const val=(i,fallback)=>values[i].status==='fulfilled'?(values[i].value??fallback):fallback;
- listings=val(0,[]);chainProperties=val(1,[]);agent=val(2,null);receipts=val(3,[]);balance=val(4,'—');
- const newHoldings={};if(account&&isReady('settlement')){
-  const results=await Promise.allSettled(listings.map(l=>view('settlement','get_holding',{property_id:num(l.property_id),account_id:account})));
-  listings.forEach((l,i)=>{newHoldings[l.property_id]=results[i].status==='fulfilled'?num(results[i].value):0});
- }holdings=newHoldings;
- const issue=values.find(x=>x.status==='rejected');if(issue)notice(`RPC read error: ${issue.reason?.message||issue.reason}`,'error');else notice('NEAR Testnet data refreshed','ok');
- updateWalletButton();if(active==='passport')await loadEvidence(chosen);else render();
- }catch(error){notice(error.message,'error');toast(error.message);render()}}
+async function refreshAll(){
+ const serial=++refreshSerial;
+ try{
+  const values=await Promise.allSettled([
+   view('settlement','get_listings'),view('registry','get_properties'),
+   account?view('policy','get_agent',{account_id:account}):Promise.resolve(null),
+   view('policy','get_recent_receipts'),
+   account?readBalance(account):Promise.resolve('—')
+  ]);
+  if(serial!==refreshSerial)return; // Do not overwrite newer wallet/account reads.
+  const readArray=(index,kind)=>{
+   const item=values[index];
+   if(item.status==='fulfilled'&&Array.isArray(item.value)){
+    chainStatus[kind]='ready';delete chainErrors[kind];return item.value;
+   }
+   chainStatus[kind]='error';
+   chainErrors[kind]=item.status==='rejected'?String(item.reason?.message||item.reason):'Unexpected contract response (expected array)';
+   return null;
+  };
+  const nextListings=readArray(0,'settlement');if(nextListings!==null)listings=nextListings;
+  const nextProperties=readArray(1,'registry');if(nextProperties!==null)chainProperties=nextProperties;
+  const nextReceipts=readArray(3,'policy');if(nextReceipts!==null)receipts=nextReceipts;
+  agent=values[2].status==='fulfilled'?values[2].value:null;
+  balance=values[4].status==='fulfilled'?values[4].value:'—';
+  const newHoldings={};
+  if(account&&chainStatus.settlement==='ready'){
+   const results=await Promise.allSettled(listings.map(l=>view('settlement','get_holding',{property_id:num(l.property_id),account_id:account})));
+   if(serial!==refreshSerial)return;
+   listings.forEach((l,i)=>{newHoldings[l.property_id]=results[i].status==='fulfilled'?num(results[i].value):0});
+  }
+  if(serial!==refreshSerial)return;
+  holdings=newHoldings;
+  const errors=Object.entries(chainErrors);
+  if(errors.length)notice('NEAR RPC read error: '+errors.map(([k,v])=>`${k}: ${v}`).join(' | '),'error');
+  else notice('NEAR Testnet onchain records refreshed','ok');
+  updateWalletButton();
+  if(active==='passport')await loadEvidence(chosen);else render();
+ }catch(error){
+  if(serial!==refreshSerial)return;
+  notice(`NEAR refresh failed: ${error.message}`,'error');toast(error.message);render();
+ }
+}
 async function loadEvidence(propertyId){try{evidence=await view('registry','get_evidence',{property_id:num(propertyId)})||[]}catch(err){notice(err.message,'error');evidence=[]}render()}
 async function submit(kind, method, args, deposit='0'){
  if(busy)return;
@@ -194,7 +283,7 @@ async function submit(kind, method, args, deposit='0'){
   else {notice('Wallet redirect opened. On return, refresh the onchain state.');toast('Confirm transaction in your NEAR wallet');}
  }catch(error){notice(`Transaction failed or rejected: ${error.message}`,'error');toast(error.message||'Wallet declined transaction');console.error(error)}finally{busy=false;await refreshAll()}
 }
-async function connectWallet(){if(!modal){toast('Wallet selector is not available. See configuration / browser console.');return}modal.show()}
+async function connectWallet(){if(!modal){toast(walletError||'Meteor Wallet is not ready yet. See the browser console.');return}modal.show()}
 function updateWalletButton(){const b=$('#walletBtn');if(!b)return;b.textContent=account?`◈ ${compact(account)}${balance!=='—'?' · '+balance:''}`:'Connect NEAR wallet';b.classList.toggle('connected',!!account)}
 async function initializeWallet(){try{
  // Do not make the page render depend on wallet package/module initialization.
@@ -204,30 +293,35 @@ async function initializeWallet(){try{
   import('@near-wallet-selector/meteor-wallet')
  ]);
  actionCreators=walletActions;
- selector=await setupWalletSelector({network:'testnet',modules:[setupMeteorWallet()]});
+ selector=await setupWalletSelector({
+  network: {networkId:'testnet',nodeUrl:cfg.rpcUrl,
+    helperUrl:'https://helper.testnet.near.org',explorerUrl:cfg.explorerUrl},
+  modules:[setupMeteorWallet()]
+ });
  // A contract must exist before the wallet can authorize its restricted function-call key.
  // The UI can be examined read-only before deployment; wallet connection enables after config.
  if(isReady('settlement')) modal=setupModal(selector,{contractId:cfg.settlement});
- const sync=async()=>{const state=selector.store.getState();account=state.accounts.find(a=>a.active)?.accountId||state.accounts[0]?.accountId||'';await refreshAll()};
+ const sync=async()=>{const state=selector.store.getState();account=state.accounts.find(a=>a.active)?.accountId||state.accounts[0]?.accountId||'';walletError='';await refreshAll()};
  selector.store.observable.subscribe(sync);await sync();
- }catch(error){notice(`Wallet selector initialization: ${error.message}`,'error');console.error(error);toast('NEAR wallet selector unavailable. Read-only catalogue remains usable.')}}
+ }catch(error){walletError=`Meteor Wallet initialization failed: ${error.message}`;notice(walletError,'error');console.error(error);toast('Meteor Wallet unavailable; onchain data remains readable.');render()}}
 function bindGlobal(){
  $('.nav').onclick=e=>{const b=e.target.closest('[data-view]');if(b)setRoute(b.dataset.view)};
  $('#walletBtn').onclick=connectWallet;
- app.onclick=e=>{const passport=e.target.closest('[data-passport]');if(passport){selectProperty(passport.dataset.passport,'passport');return}const buy=e.target.closest('[data-buy]');if(buy){selectProperty(buy.dataset.buy,'settlement');return}const b=e.target.closest('[data-open]');if(b){selectProperty(b.dataset.open);return}const d=e.target.closest('[data-viewgo]');if(d){setRoute(d.dataset.viewgo);return}const w=e.target.closest('[data-wallet]');if(w)connectWallet()};
+ app.onclick=e=>{const passport=e.target.closest('[data-passport]');if(passport){selectProperty(passport.dataset.passport,'passport');return}const buy=e.target.closest('[data-buy]');if(buy){selectProperty(buy.dataset.buy,'settlement');return}const b=e.target.closest('[data-open]');if(b){selectProperty(b.dataset.open);return}const d=e.target.closest('[data-viewgo]');if(d){setRoute(d.dataset.viewgo);return}const w=e.target.closest('[data-wallet]');if(w)connectWallet();const refresh=e.target.closest('[data-chain-refresh]');if(refresh)void refreshAll()};
  window.addEventListener('hashchange',async()=>{active=viewFromHash();if(active==='passport')await loadEvidence(chosen);else render()});
  $('#themeToggle').onclick=()=>{const current=document.documentElement.dataset.theme||'light';const next=current==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('intent-blue-theme',next)};
  const saved=localStorage.getItem('intent-blue-theme');document.documentElement.dataset.theme=saved==='dark'?'dark':'light';
 }
 async function boot(){bindGlobal();const [propertyData,deployments]=await Promise.all([
  fetch('/properties.json').then(r=>{if(!r.ok)throw Error(`Catalogue HTTP ${r.status}`);return r.json()}),
- fetch('/deployments.json').then(r=>{if(!r.ok)throw Error(`Deployment configuration HTTP ${r.status}`);return r.json()}).catch(e=>{console.warn('NEAR deployment configuration unavailable:',e);return {}})
+ fetch('/deployments.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(`Deployment configuration HTTP ${r.status}`);return r.json()}).catch(e=>{console.warn('NEAR deployment configuration unavailable:',e);return {}})
 ]);
  if(!Array.isArray(propertyData)||!propertyData.length)throw Error('Property catalogue is empty or invalid');
  props=propertyData;
- cfg={rpcUrl:'https://rpc.testnet.near.org',explorerUrl:'https://testnet.nearblocks.io',faucetUrl:'https://near-faucet.io',...deployments};
+ cfg={rpcUrl:'https://test.rpc.fastnear.com',rpcFallbackUrls:['https://near-testnet.drpc.org'],explorerUrl:'https://testnet.nearblocks.io',faucetUrl:'https://near-faucet.io',...deployments};
  active=viewFromHash();
- render(); // The property catalogue must work even if wallet modules fail to load.
- void initializeWallet();
+ render(); // Paint the catalogue without waiting on wallet, RPC, or an extension.
+ void refreshAll(); // Read registry/listings immediately, including for disconnected users.
+ void initializeWallet(); // Separate: signing should never block public onchain reads.
 }
 boot().catch(error=>{console.error(error);app.innerHTML=`<div class="shell page"><h2>Failed to load INTENT</h2><p>${esc(error.message)}</p></div>`});

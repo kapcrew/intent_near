@@ -2,6 +2,9 @@
 
 **NEAR HACKATHON 2026 · Native Testnet contracts · Three separately deployable Rust crates.**
 
+**TRY ON https://intentnear.kapcrew.com/**
+
+
 > **Deployment status:** SOURCE PACKAGE / NOT DEPLOYED by the author of this archive. It contains no account keys or fabricated contract IDs. To enable live writes, follow `docs/DEPLOY_NEAR_TESTNET_RU.md`. A configured ID alone does not prove successful deployment; verify using `npm run smoke:near` and NEAR Blocks.
 
 INTENT brings a verifiable property information lifecycle to NEAR: property records, human-reviewed evidence, native testnet NEAR Property Cell settlement, and agent payments controlled by spending policies. It reuses the existing INTENT catalogue/design (50 sample properties and world map of 117 **prospective** ecosystem organizations), combining the policy ideas from `lineageProtocol` with **new native NEAR Testnet implementations**.

@@ -3,7 +3,10 @@
   "registry": "registry.intent.testnet",
   "settlement": "settlement.intent.testnet",
   "policy": "policy.intent.testnet",
-  "rpcUrl": "https://rpc.testnet.near.org",
+  "rpcUrl": "https://test.rpc.fastnear.com",
   "explorerUrl": "https://testnet.nearblocks.io",
-  "faucetUrl": "https://near-faucet.io"
+  "faucetUrl": "https://near-faucet.io",
+  "rpcFallbackUrls": [
+    "https://near-testnet.drpc.org"
+  ]
 }

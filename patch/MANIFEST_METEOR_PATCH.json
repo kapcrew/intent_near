@@ -1,0 +1,9 @@
+{
+  "base": "INTENT_NEAR_TESTNET_HACKATHON_FULL.zip",
+  "changed_files": [
+    "web/src/main.js",
+    "web/package.json"
+  ],
+  "unchanged": "contracts and partner assets",
+  "purpose": "switch browser wallet integration from MyNearWallet to Meteor Wallet"
+}

@@ -104,7 +104,7 @@ impl AgentPolicy {
         env::log_str(&format!("AGENT_PAYMENT_PENDING:{}", receipt_id));
         let args = near_sdk::serde_json::json!({"receipt_id": receipt_id}).to_string().into_bytes();
         Promise::new(provider_id).transfer(NearToken::from_yoctonear(amount)).then(
-            Promise::new(env::current_account_id()).function_call("on_payment_complete".into(), args, NearToken::from_yoctonear(0), Gas::from_tgas(20))
+            Promise::new(env::current_account_id()).function_call("on_payment_complete", args, NearToken::from_yoctonear(0), Gas::from_tgas(20))
         )
     }
     #[private]

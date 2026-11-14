@@ -1,1 +1,9 @@
-{"network":"testnet","registry":"","settlement":"","policy":"","rpcUrl":"https://rpc.testnet.near.org","explorerUrl":"https://testnet.nearblocks.io","faucetUrl":"https://near-faucet.io"}
+{
+  "network": "testnet",
+  "registry": "registry.intent.testnet",
+  "settlement": "settlement.intent.testnet",
+  "policy": "policy.intent.testnet",
+  "rpcUrl": "https://rpc.testnet.near.org",
+  "explorerUrl": "https://testnet.nearblocks.io",
+  "faucetUrl": "https://near-faucet.io"
+}

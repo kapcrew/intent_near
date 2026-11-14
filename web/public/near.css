@@ -26,3 +26,49 @@ button:disabled{opacity:.5;cursor:not-allowed}
 [data-theme=dark] .near-form input,[data-theme=dark] .near-form select,[data-theme=dark] .near-form textarea{background:#1d2742;color:#f3f6ff;border-color:#465476}
 [data-theme=dark] .near-banner{background:rgba(82,109,226,.12)}[data-theme=dark] .near-record,[data-theme=dark] .near-property-row{border-color:#4c5870}
 @media(max-width:920px){.topbar{flex-wrap:wrap}.topbar .nav{order:3;overflow-x:auto;width:100%;justify-content:flex-start}.top-actions{margin-left:auto}.hero{grid-template-columns:1fr!important}}
+
+/* Visual fidelity restoration — original INTENT blue design, no contract logic changes. */
+.property-card .property-photo{display:block;position:relative;height:235px;background-position:center;background-size:cover;overflow:hidden}
+.property-card .property-photo::after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(0deg,rgba(8,17,36,.63),transparent);pointer-events:none}
+.property-card .property-photo .property-tags,.property-card .property-photo .property-city{position:absolute;z-index:1}
+.property-card .property-photo .property-tags{top:15px;left:15px;right:15px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.property-card .property-photo .property-tags span{border-radius:100px;padding:9px 12px;background:#f9fbffec;color:#273148;letter-spacing:.04em;font-size:10px;text-transform:uppercase;max-width:65%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.property-card .property-photo .property-tags span.arc-live{background:#f0f2ff;color:#334cdb;max-width:none}
+.property-card .property-photo .property-city{bottom:15px;left:17px;color:white;font-size:13px;font-weight:500}
+.property-grid .property-card{min-width:0;display:flex;flex-direction:column}
+.property-grid .property-card .property-body{flex:1;display:flex;flex-direction:column;gap:0;padding:22px}
+.property-card .property-detail-link{color:inherit;text-decoration:none}
+.property-card .property-detail-link:hover{color:#334cdb}
+.property-grid .property-card .property-metrics{margin-top:19px}
+.property-grid .property-card .property-actions{margin-top:auto;padding-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.property-card .property-actions button{min-width:0;min-height:42px}
+/* Restored original two-column Passport with a true hero image. */
+.near-passport-page .passport-toolbar{width:100%;margin:0 0 24px}
+.near-passport-page .passport-toolbar label{font-size:12px}
+.near-passport-page .passport-toolbar .hero-actions{flex-wrap:wrap;margin-top:0;justify-content:flex-end}
+.near-passport-page .passport{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);align-items:start;gap:20px}
+.near-passport-page .passport-hero{min-width:0;border-radius:24px;overflow:hidden}
+.near-passport-page .passport-image{min-height:290px;background-size:cover;background-position:center}
+.near-passport-page .passport-info{gap:10px}
+.near-passport-page .passport-info>div{min-width:0}
+.near-passport-page .passport-info b{overflow-wrap:anywhere}
+.near-passport-page .near-passport-checks{min-width:0;border-radius:24px}
+.near-passport-page .near-passport-checks .checks{display:grid;gap:12px}
+.near-passport-page .near-passport-checks .check-detail{min-width:0}
+.near-reference-caption{margin:8px 0 14px;font-size:12px;line-height:1.5;color:#68738a}
+.near-onchain-summary{margin-top:20px;border-top:1px solid #dce1ee;padding-top:19px}
+.near-onchain-summary small{display:block;margin-top:12px;font-size:12px}
+.near-passport-note{margin-top:14px}
+.near-passport-ledger .section-head{margin-bottom:18px}
+.near-passport-ledger .near-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.near-passport-ledger .near-grid>article{min-width:0}
+/* Keep navigation and footer aligned with the original full-width identity. */
+.site-footer .footer-wordmark{display:flex;align-items:center;flex-shrink:0}
+.site-footer .footer-wordmark img{width:180px;height:auto}
+.topbar .nav{min-width:0}
+.topbar .nav button:focus-visible,.property-actions button:focus-visible{outline:2px solid #334cdb;outline-offset:3px}
+[data-theme=dark] .property-card .property-photo .property-tags span{background:#e7e9f9;color:#1a2855}
+[data-theme=dark] .near-reference-caption{color:#aeb8ce}
+[data-theme=dark] .near-onchain-summary{border-color:#3b455b}
+@media(max-width:1000px){.near-passport-page .passport{grid-template-columns:1fr}.near-passport-ledger .near-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.near-passport-page .passport-toolbar{padding:16px}.near-passport-page .passport-toolbar .hero-actions{justify-content:stretch;width:100%}.near-passport-page .passport-toolbar .hero-actions>button{flex:1}.property-card .property-photo{height:220px}}
